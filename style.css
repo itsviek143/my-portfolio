@@ -267,10 +267,13 @@ main{
     .introbtn{
         flex-direction: column;
         width: 100%;
+        
     }
 
     .introbtn button{
         width: 100%;
+        align-items: center;
+        margin: 0rem;
     }
     .pic{
         width: 100%;
