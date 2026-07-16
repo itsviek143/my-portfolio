@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Button Click Counter</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg,#141e30,#243b55);
+    }
+
+    .container{
+      width:350px;
+      padding:40px 30px;
+      background: rgba(255,255,255,0.08);
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      color:white;
+    }
+
+    h1{
+      margin-bottom:25px;
+      font-size:32px;
+    }
+
+    .count{
+      font-size:70px;
+      font-weight:bold;
+      margin-bottom:30px;
+      color:#00ffd5;
+      text-shadow:0 0 15px rgba(0,255,213,0.7);
+    }
+
+    #start,#reset{
+      padding:15px 35px;
+      font-size:20px;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      color:#111;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    #start{
+      background: linear-gradient(45deg,#00ffd5,#00b7ff);
+    }
+    #reset{
+      background: linear-gradient(45deg,#c21264,#ff0101);
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Click Counter</h1>
+
+    <div class="count" id="count">0</div>
+
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    let startbtn = document.querySelector("#start");
+    let resetbtn = document.querySelector("#reset");
+    let countText = document.querySelector("#count");
+
+    startbtn.addEventListener("click", () => {
+      count++;
+      countText.innerText = count;
+    });
+    resetbtn.addEventListener("click",()=>{
+      count=0;
+      countText.innerText=count;
+    })
+  </script>
+
+</body>
+</html>

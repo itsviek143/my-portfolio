@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select:none;
+}
+
+body{
+    padding: 1rem;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:
+
+    radial-gradient(circle at 20% 20%,#312e81 0%,transparent 35%),
+    radial-gradient(circle at 80% 80%,#0e7490 0%,transparent 35%),#09090f;
+
+}
+
+.container{
+    max-width: 450px;
+    width: 100%;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.container:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    border: 1px solid white;
+
+}
+h1{
+    color: #f8fafc;
+    font-size: 2.5rem;
+    
+
+}
+#message{
+    
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 0 0 10px rgb(255, 2, 2);
+    
+}
+
+
+#userinput{
+    height:3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    outline-color: #7238d6;
+    outline-style:groove;
+    border: 1px solid rgb(0, 213, 255);
+    color: rgb(30, 133, 171);
+    font-size: 1.5rem;
+   
+}
+
+
+#error{
+    text-align: left;
+    color: rgb(233, 32, 32);
+    font-size: 1rem;
+    font-weight:100;
+    
+
+
+}
+p{
+    color: rgb(237, 235, 231);
+    font-size: 2rem;
+    text-align: left;
+}
+button{
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(60, 33, 169);
+    transition: all 0.3s;
+}
+button:hover{
+    background-color: rgb(52, 9, 224) ;
+    box-shadow: 0 0 10px rgb(181, 200, 203);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
