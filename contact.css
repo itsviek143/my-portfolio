@@ -80,6 +80,9 @@ body{
     outline-color:#38bdf8;;
     
 }
+#message{
+    color: white;
+}
 
 .button1{
     width: 100%;

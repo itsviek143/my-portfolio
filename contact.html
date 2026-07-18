@@ -41,19 +41,28 @@ const message = document.getElementById("message");
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
+    message.innerText = "Sending...";
+
     emailjs.sendForm("itsvivek143", "template_cve47nv", this)
-    .then(function() {
-        message.innerText = "Message has been sent";
+    .then(function(response) {
+        message.style.color = "lime";
+        message.innerText = "Message Sent Successfully";
+        
+        console.log(response);
         form.reset();
     })
     .catch(function(error) {
-        message.innerText = "Failed to send";
+        message.style.color = "red";
+        message.innerText = "Failed to Send";
+        
         console.log(error);
     });
 });
 
 form.addEventListener("reset", function() {
-    message.innerText = "";
+    setTimeout(function(){
+        message.innerText = "";
+    },3000);
 });
 </script>
 
