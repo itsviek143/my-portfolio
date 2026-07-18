@@ -3,55 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contactForm</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-<form action="" id="form">
+
+<form id="form">
     <div class="contact">
-        
+
         <h1>Contact me</h1>
-        <p>Feel free to contact me for projects,interships,or collaboration</p>
-        <input type="text" placeholder="Full Name" id="name" required>
-        <input type="email" placeholder="Email Address" id="email" required>
-        <textarea placeholder="Message"></textarea>
+        <p>Feel free to contact me for projects, internships, or collaboration</p>
+
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+        <textarea id="msg" name="message" placeholder="Message" required></textarea>
+
         <p id="message"></p>
+
         <div class="button1">
-        <button class="btn" id="submit">Send Message</button>
-        <button type="reset" class="btn" id="reset">Reset</button>
+            <button type="submit" class="btn">Send Message</button>
+            <button type="reset" class="btn">Reset</button>
         </div>
-        
+
     </div>
-    </form>
-        <script>
-const form = document.querySelector("#form");
-const nameInput = document.querySelector("#name");
-const emailId=document.querySelector("#email");
-const message = document.querySelector("#message");
+</form>
 
-form.addEventListener("submit", function(event) {
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    event.preventDefault();
+<script>
+emailjs.init("6Jsk0wUuwFB2uIjMH");
 
-    let name = nameInput.value.trim();
-    let email=emailId.value;
+const form = document.getElementById("form");
+const message = document.getElementById("message");
 
-    if (name === "" || email === "") {
-        message.innerText = "Fill all fields";
-        return;
-    }
-    
-    message.innerText = "Message has send";
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    console.log(name);
-    console.log(email);
-    
+    emailjs.sendForm("itsvivek143", "template_cve47nv", this)
+    .then(function() {
+        message.innerText = "Message has been sent";
+        form.reset();
+    })
+    .catch(function(error) {
+        message.innerText = "Failed to send";
+        console.log(error);
+    });
 });
 
 form.addEventListener("reset", function() {
     message.innerText = "";
 });
 </script>
-    
+
 </body>
 </html>
