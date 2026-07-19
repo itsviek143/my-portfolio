@@ -37,22 +37,25 @@ header{
 
 .tabs ul{
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style: none;
     align-items: center;
     
 }
+.tabs ul li{
+    border: 1px solid transparent;
+    padding: 0.5rem;
+}
+
+
 .tabs ul li:hover{
     box-shadow: inset 0 0 10px rgb(255, 255, 255);
-    border: 1px solid purple;
-    padding: 0.5rem;
+    border-color: purple;
+    
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-color: rgb(172, 57, 195);
-    color: white;
-    
-    
-    
+    color: white;   
 }
 
 a{
@@ -67,18 +70,20 @@ a{
     padding:0.5rem 2rem;
     border-radius: 0.3rem;
     border: none;
-    background-color: rgb(150, 10, 150);
+    background-color: rgb(127, 17, 127);
     transition: 0.3s;
 }
 .navbar #talk a{
     color: white;
 }
 
-
 .navbar #talk:hover{
-     box-shadow: 0 0 15px rgb(181, 16, 145);
+     box-shadow: 0 0 15px rgb(229, 29, 185);
      transform: scale(1.05);
+    background-color: rgb(161, 33, 161);
+
 }
+
 main{
     min-height: calc(100vh - 60px);
     display: flex;
