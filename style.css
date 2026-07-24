@@ -6,7 +6,10 @@
 
 }
 body{
-    background: linear-gradient(to right,#f8f8f8,#ececec);
+     background:
+    radial-gradient(circle at 15% 20%,rgba(168,85,247,.15),transparent 100%),
+    radial-gradient(circle at 85% 80%,rgba(59,130,246,.12),transparent 100%),
+    linear-gradient(135deg,#f8f9ff,#f1f5ff,#ffffff);
 }
 
 

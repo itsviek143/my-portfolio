@@ -13,7 +13,7 @@ let drawcount=0;
 
 let emoji = {
     stone: "🪨",
-    pepper: "📰",
+    papper: "📰",
     scissors: "✂️"
 };
 
@@ -57,7 +57,7 @@ btns.addEventListener("click", (evt) => {
         comchoice = "stone";
 
     } else if (randnum === 2) {
-        comchoice = "pepper";
+        comchoice = "papper";
 
     } else {
         comchoice = "scissors";
@@ -80,7 +80,7 @@ btns.addEventListener("click", (evt) => {
         winner();
 
     } else if (
-        userchoice === "pepper" &&
+        userchoice === "papper" &&
         comchoice === "stone"
     ) {
 
@@ -89,7 +89,7 @@ btns.addEventListener("click", (evt) => {
 
     } else if (
         userchoice === "scissors" &&
-        comchoice === "pepper"
+        comchoice === "papper"
     ) {
 
         message.innerText = "💖You Are Winner 🏆";
